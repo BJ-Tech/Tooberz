@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooberz | Sign Up</title>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- normalize css -->
+    <link rel = "stylesheet" href = "/Tooberz/styles/landing.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "/styles/landing.css">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar">
+        <div class = "container flex">
+            <a href = "#" class = "navbar-brand">Tooberz<span>.CO</span></a>
+
+            <div class = "navbar-collapse">
+                <button type = "button" class = "navbar-toggler-close">
+                    <i class = "fas fa-times"></i>
+                </button>
+                <li class = "navbar-nav">
+                    <li class = "nav-item">
+                    <a href = "landing.html" class = "nav-link">Home</a><i class="fas fa-home"></i>
+                    </li>
+
+                    <li class = "nav-item">
+                    <a href = "info.html" class = "nav-link">About</a><i class="fas fa-address-card"></i>
+                    </li>
+
+                    </li>
+
+                    
+
+            <div class = "nav-icons-group">
+                <form class = "search-form">
+                    <div class = "search-icon-group">
+                        <input type = "search" class = "search-control">
+                        <button type = "submit" class = "search-icon">
+                            <i class = "fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <button type = "button" class = "navbar-toggler-open">
+                    <i class = "fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header -->
+    <br><br><br><br><br>
+    <!-- end of header -->
+
+    <!-- main -->
+    <main>
+       <h1 align="center" style="font-family: 'Courier New', Courier, monospace;">
+            Sign Up
+        </h1>
+        <br>
+        <p align="center" style="font-family: 'Courier New', Courier, monospace;">
+            <i>Tooberz is currently being worked on right now,
+                sign up to be notified when it is ready!
+                <br>
+                You can help speed up the process by contributing to the github
+                at <a href="https://github.com/BJ-Tech/Tooberz">our github!</a>
+            </i>
+        </p>
+        <container class="Container">
+            <div class="Sign-Up-Form" align="center">
+                <form action="signup">
+                    <input type="text" placeholder=" Name" id="name">
+                    <input type="email" placeholder="Email" id="from-email">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="Submit" onclick="storeEmail();">
+                </form>
+            </div>
+        </container>
+            <!--  -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Here is a script where we will be collecting data from the form  -->
+        <script>
+            $('form').on('submit', (e) => {
+                // e.preventDefault();
+
+                const name = $('#name').val().trim();
+                const email = $('#from-email').val().trim();
+                const subject = $('#subject').val().trim();
+                const text = $('#text').val().trim();
+
+                const data = {
+                    name,
+                    email,
+                    subject,
+                    text
+                };
+
+                $.post('/email', data, function() {
+                    console.log('Server recieved our data');
+
+
+                });
+            });
+            // document.getElementById('#form-data').reset();
+        </script>
+
+    </main>
+    <br><br><br><br>
+    <!-- end of main -->
+
+    <!-- footer -->
+    <footer id = "footer">
+        <div class = "container">
+            <div class = "footer-links-1">
+                <h2>Join Tooberz:</h2>
+                <ul class = "flex">
+                    <li>
+                        <a href = ""><i class = "fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href = "https://www.youtube.com/channel/UCf4p7wQktMg8te4NLuxqkQw"><i class = "fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class = "footer-links-2">
+                <ul class = "flex">
+                    
+                    <li>
+                        <a href = "https://www.youtube.com/channel/UCf4p7wQktMg8te4NLuxqkQw">Advertise</a>
+                    </li>
+                    <li>
+                        <a href = "https://nordvpn.com">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href = "">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <p class = "text">&copy; <a>NafizTech</a>, <a>OrzanTech</a>. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+
+    <!-- normalize js -->
+    <script src = "landing.js"></script>
+    <script>
+            // stores email from form from signup.html in mail.json
+
+            function storeEmail() {
+                const email = document.getElementById('from-email').value;
+                const data = {
+                    email: email
+                };
+                const json = JSON.stringify(data);
+                fs.writeFile('mail.json', json, 'utf8', function(err) {
+                    if (err) {
+                        console.log('Error: ', err);
+                    } else {
+                        console.log('Successfully written to file');
+                    }
+                });
+
+                // riderects to landing.html
+                window.location.href = './landing.html';
+            }
+
+            storeEmail();
+        </script>
+</body>
+</html>
