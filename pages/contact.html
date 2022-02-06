@@ -1,3 +1,5 @@
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,13 +32,11 @@
                     </li>
 
                     <li class = "nav-item">
-                    <a href = "signup.html" class = "nav-link">SignUp</a><i class="fas fa-user-plus"></i>
+                    <a href = "info.html" class = "nav-link">About</a><i class="fas fa-address-card"></i>
                     </li>
 
                     </li>
-                    <li class = "nav-item">
-                        <a href = "contact.html" class = "nav-link">Contact</a><i class="fas fa-headset"></i>
-                    </li>
+
                     
 
             <div class = "nav-icons-group">
@@ -54,44 +54,65 @@
             </div>
         </div>
     </nav>
-    <!-- end of navbar -->
 
-    <!-- header -->
- 
-    <!-- end of header -->
+<!-------Contact Us------>
 
-    <!-- main -->
-        <main>
-            <h1 class="Title_1" align="center">About</h1>
-            <br>
-            <img src="./images/favicon.ico" alt="logo" sizes="10px">
-            <br>
-            <p class="p_1" align="center">
-                Tooberz is an open-source project that aims to provide a platform for users to share their knowledge and experience with other users. <br>
-                The way it works is that users create an account, take a short quiz,
-                find their channel, and share their knowledge with other content creators.
-            </p>
-            <br><br><br>
-            <h1 class="Title_2" align="center">What We Aim to Do</h1>
-            <br>
-            <p class="p_2" align="center">
-                We aim to allow small content-creators to grow their audience and their content by
-                learning from other content creators, getting feedback from them, and sharing videos
-                with other content creators.
-            </p>
-            <br><br><br>
-            <h1 class="Title_3" align="center">Why Us?</h1>
-            <br>
-            <p class="p_3" align="center">
-                So why us? There are other softwares where you can message creators and learn from them,
-                but we offer not just a messaging app, we also offer benefits specifically catered for 
-                content creators. Our quiz helps you find your niche and other creators in the same
-                niche as you. We have algorithims that are specifically designed to help you, and only you.
-                With all these benefits and more, why not choose us?
-            </p>
-        </main>
-        <br><br><br><br><br>
-    <!-- end of main -->
+<section class="location">
+	
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d443090.1893523006!2d-95.68148393581531!3d29.816882387434067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d02def365053b!2sHouston%2C%20TX!5e0!3m2!1sen!2sus!4v1629604560561!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</section>
+
+
+<section class="contact-us">
+	
+	<div class="row">
+		<div class="contact-col">
+			<div>
+				<i class="fas fa-leaf"></i>
+				<span>
+					<h5>Unknown, Houston, TX Unknown</h5>
+					<p>United States Of America</p>
+				</span>
+			</div>
+			<div>
+				<i class="fas fa-phone"></i>
+				<span>
+					<h5>+1(###)###-####</h5>
+					<p>Monday To Friday, 10AM to 6PM</p>
+				</span>
+			</div>
+			<div>
+                <i class="fas fa-envelope"></i>
+				<span>
+					<h5>info@nafiztech2020@gmail.com</h5>
+					<p>Email us your query</p>
+				</span>
+			</div>
+		</div>
+		<div class="contact-col">
+				
+			<form action="" method="post">
+				<input type="text" name="name" placeholder="Enter your name"required>
+				<input type="email" name="email" placeholder="Enter email address"required>
+				<input type="text" name="subject" placeholder="Enter your subject"required>
+				<textarea rows="8" name="message" placeholder="Message"required></textarea>
+				<div class="container">
+				<button class="btn-3">Send Message</button>
+			</a>
+			</div>
+			</form>
+
+
+		</div>
+	</div>
+
+</section>
+
+
+
+
+
 
     <!-- footer -->
     <footer id = "footer">
@@ -118,10 +139,7 @@
                         <a href = "https://nordvpn.com">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href = "https://mail.google.com/">Contact</a>
-                    </li>
-                    <li>
-                        <a href = "">Reviews</a>
+                        <a href = "">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -130,9 +148,21 @@
         </div>
     </footer>
     <!-- end of footer -->
+  
 
 
-    <!-- normalize js -->
-    <script src = "./backend/landing.js"></script>
-</body>
-</html>
+
+<!-----Javascript For Toggle Menu------>
+<script>
+	
+	var navLinks = document.getElementById("navLinks");
+
+	function showMenu(){
+		navLink.style.right = "0"
+	}
+	function hideMenu(){
+		navLink.style.right = "-200px"
+	}
+
+</script>
+ 
