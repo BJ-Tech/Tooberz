@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tooberz | Sign Up</title>
+    <title>Tooberz</title>
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- normalize css -->
-    <link rel = "stylesheet" href = "./css/landing.css">
+    <link rel = "stylesheet" href = "landing.css">
     <!-- custom css -->
-    <link rel = "stylesheet" href = "./css/styles.css">
-    <link rel="stylesheet" href="./css/info.css">
-    <link rel="stylesheet" href="./css/sign.css">
+    <link rel = "stylesheet" href = "./css/landing.css">
     <!--Favicon-->
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- navbar -->
-    <nav class = "navbar">
+     <!-- navbar -->
+     <nav class = "navbar">
         <div class = "container flex">
             <a href = "./landing.html" class = "navbar-brand">Tooberz<span>Company</span></a>
 
@@ -59,71 +57,21 @@
             </div>
         </div>
     </nav>
+    <br><br><br><br><br>
     <!-- end of navbar -->
 
     <!-- header -->
-    <br><br><br><br><br>
+ 
     <!-- end of header -->
 
     <!-- main -->
     <main>
-       <h1 align="center" style="font-family: 'Courier New', Courier, monospace;">
-            Sign Up
-        </h1>
-        <br>
-        <p align="center" style="font-family: 'Courier New', Courier, monospace;">
-            <i>Tooberz is currently being worked on right now,
-                sign up to be notified when it is ready!
-                <br>
-                You can help speed up the process by contributing to the github
-                at <a href="https://github.com/BJ-Tech/Tooberz">our github!</a>
-            </i>
-        </p>
-        <container class="Container">
-            <div class="Sign-Up-Form" align="center">
-                <form action="signup">
-                    <input type="text" placeholder="First Name" id="name">
-                    <input type="text" placeholder="Last Name" id="last_name">
-                    <input type="email" placeholder="Email" id="from-email">
-                    <input type="password" placeholder="Password">
-                    <button onclick="storeEmail();" value="Submit">Submit</button>
-                    <script>
-                        // gathers email from form then stores it in emails.json
-
-                        // function to store email in emails.json
-                        function storeEmail(email) {
-                            // get email from what user has submitted
-                            var email = document.getElementById("email").value;
-                            
-                            // if email is not empty
-                            if (email != "") {
-                                // get email from emails.json
-                                var emails = JSON.parse(localStorage.getItem("emails"));
-                                
-                                // if emails is null
-                                if (emails == null) {
-                                    emails = [];
-                                }
-                                
-                                // add email to emails
-                                emails.push(email);
-                                
-                                // store emails in emails.json
-                                localStorage.setItem("emails", JSON.stringify(emails));
-                            }
-
-                            // riderect user to thank you page
-                            window.location.href = "./backend/thankyou.html";
-
-                        }
-                    </script>
-                </form>
-            </div>
-        </container>
+       <h1 align="center" style="font-family: 'Times New Roman', Times, serif;">Thank You!</h1>
+         <h2 align="center" style="font-family: 'Times New Roman', Times, serif;">Your form has been submitted!</h2>
+            <h3 align="center" style="font-family: 'Times New Roman', Times, serif;">We will get back to you soon!</h3>
     </main>
-    <br><br><br><br>
     <!-- end of main -->
-
+    <br><br><br><br>
     <!-- footer -->
     <footer id = "footer">
         <div class = "container">
@@ -162,6 +110,7 @@
 
     <!-- normalize js -->
     <script src = "./backend/landing.js"></script>
-    <script src="./backend/signup.js"></script>
 </body>
 </html>
+
+     
